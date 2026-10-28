@@ -25,7 +25,7 @@ export default function Admin() {
   }
 
   const tabClass = (active: boolean) =>
-    `rounded-md px-4 py-2 text-sm font-medium ${active ? 'bg-navy-700 text-white' : 'bg-navy-50 text-navy-700 hover:bg-navy-100'}`
+    `rounded px-4 py-2 text-sm font-medium ${active ? 'bg-navy-700 text-white' : 'bg-navy-50 text-navy-700 hover:bg-navy-100'}`
 
   return (
     <>

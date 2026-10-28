@@ -17,6 +17,7 @@ export default {
         },
       },
       fontFamily: {
+        serif: ['"Noto Serif KR"', 'Georgia', '"Apple Myungjo"', 'serif'],
         sans: ['Pretendard', '-apple-system', 'BlinkMacSystemFont', '"Malgun Gothic"', '"Apple SD Gothic Neo"', 'sans-serif'],
       },
     },

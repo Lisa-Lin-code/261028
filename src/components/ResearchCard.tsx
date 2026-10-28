@@ -10,9 +10,9 @@ interface Props {
 
 export default function ResearchCard({ research, onTagClick }: Props) {
   return (
-    <article className="rounded-lg border border-slate-200 p-5 transition-shadow hover:shadow-md">
-      <p className="text-xs text-slate-500">{formatDate(research.createdAt)}</p>
-      <h3 className="mt-1 text-lg font-semibold text-navy-800">
+    <article className="rounded border border-slate-200 bg-white p-5 shadow-sm transition hover:border-navy-200 hover:shadow-md">
+      <p className="text-xs font-medium uppercase tracking-wider text-slate-500">{formatDate(research.createdAt)}</p>
+      <h3 className="mt-1 text-lg font-semibold text-navy-900">
         <Link to={`/research/${research.id}`} className="hover:underline">{research.title}</Link>
       </h3>
       <p className="mt-2 text-sm text-slate-600">{research.summary}</p>

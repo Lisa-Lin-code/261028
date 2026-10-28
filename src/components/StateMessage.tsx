@@ -4,9 +4,9 @@ export function Loading({ text = '불러오는 중입니다…' }: { text?: stri
 }
 
 export function ErrorMessage({ text }: { text: string }) {
-  return <p className="rounded-md bg-red-50 px-4 py-3 text-sm text-red-700" role="alert">{text}</p>
+  return <p className="rounded border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700" role="alert">{text}</p>
 }
 
 export function Empty({ text }: { text: string }) {
-  return <p className="rounded-md bg-slate-50 py-8 text-center text-slate-500">{text}</p>
+  return <p className="rounded border border-dashed border-slate-300 bg-white py-8 text-center text-slate-500">{text}</p>
 }

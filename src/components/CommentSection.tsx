@@ -46,7 +46,7 @@ export default function CommentSection({ researchId }: { researchId: string }) {
 
   return (
     <section className="mt-12 border-t border-slate-200 pt-8" aria-labelledby="discussion-title">
-      <h2 id="discussion-title" className="text-xl font-bold text-navy-800">논의 (댓글)</h2>
+      <h2 id="discussion-title" className="text-xl font-bold text-navy-900">논의 (댓글)</h2>
 
       {loading && <Loading text="댓글을 불러오는 중입니다…" />}
       {error && <ErrorMessage text={error} />}
@@ -56,10 +56,10 @@ export default function CommentSection({ researchId }: { researchId: string }) {
 
       <ul className="mt-4 space-y-4">
         {comments?.map((c) => (
-          <li key={c.id} className="rounded-lg bg-slate-50 p-4">
+          <li key={c.id} className="rounded border border-slate-200 bg-white p-4">
             <div className="flex items-center justify-between gap-2">
               <p className="text-sm">
-                <span className="font-semibold text-navy-800">{c.authorName}</span>
+                <span className="font-semibold text-navy-900">{c.authorName}</span>
                 <span className="ml-2 text-xs text-slate-500">{formatDateTime(c.createdAt)}</span>
               </p>
               {user && (user.uid === c.authorId) && (
@@ -91,7 +91,7 @@ export default function CommentSection({ researchId }: { researchId: string }) {
           </button>
         </form>
       ) : (
-        <p className="mt-6 rounded-md bg-navy-50 px-4 py-3 text-sm text-navy-800">
+        <p className="mt-6 rounded border border-navy-100 bg-navy-50 px-4 py-3 text-sm text-navy-900">
           댓글을 작성하려면 <Link to="/login" className="font-semibold underline">로그인</Link>이 필요합니다.
         </p>
       )}
