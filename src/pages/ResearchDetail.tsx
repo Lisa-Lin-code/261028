@@ -25,7 +25,7 @@ export default function ResearchDetail() {
   return (
     <article>
       <Link to="/research" className="text-sm text-navy-600 hover:underline">← 연구 목록</Link>
-      <h1 className="mt-3 text-2xl font-bold text-navy-800 md:text-3xl">{research.title}</h1>
+      <h1 className="mt-3 text-2xl font-bold text-navy-900 md:text-3xl">{research.title}</h1>
       <p className="mt-2 text-sm text-slate-500">{formatDate(research.createdAt)}</p>
       <div className="mt-3 flex flex-wrap gap-2">
         {research.tags.map((t) => (
@@ -35,8 +35,8 @@ export default function ResearchDetail() {
 
       <div className="mt-8"><RichText text={research.content} /></div>
 
-      <section className="mt-10 rounded-lg border border-slate-200 p-5">
-        <h2 className="mb-3 text-lg font-bold text-navy-800">첨부 링크</h2>
+      <section className="mt-10 rounded border border-slate-200 bg-white p-5 shadow-sm">
+        <h2 className="mb-3 text-lg font-bold text-navy-900">첨부 링크</h2>
         <LinkList links={research.links} emptyText="첨부된 링크가 없습니다." />
       </section>
 

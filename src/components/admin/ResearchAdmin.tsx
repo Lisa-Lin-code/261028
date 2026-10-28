@@ -65,8 +65,8 @@ export default function ResearchAdmin() {
 
   return (
     <div className="space-y-10">
-      <form onSubmit={handleSubmit} className="space-y-4 rounded-lg border border-slate-200 p-5">
-        <h2 className="text-lg font-bold text-navy-800">{editingId ? '연구 글 수정' : '새 연구 글 작성'}</h2>
+      <form onSubmit={handleSubmit} className="space-y-4 rounded border border-slate-200 bg-white p-5 shadow-sm">
+        <h2 className="text-lg font-bold text-navy-900">{editingId ? '연구 글 수정' : '새 연구 글 작성'}</h2>
         {formError && <ErrorMessage text={formError} />}
         <div>
           <label className="label" htmlFor="r-title">제목</label>
@@ -92,14 +92,14 @@ export default function ResearchAdmin() {
       </form>
 
       <div>
-        <h2 className="mb-3 text-lg font-bold text-navy-800">등록된 연구 글</h2>
+        <h2 className="mb-3 text-lg font-bold text-navy-900">등록된 연구 글</h2>
         {loading && <Loading />}
         {error && <ErrorMessage text={error} />}
-        <ul className="divide-y divide-slate-200 rounded-lg border border-slate-200">
+        <ul className="divide-y divide-slate-200 rounded border border-slate-200 bg-white">
           {data?.map((r) => (
             <li key={r.id} className="flex flex-wrap items-center justify-between gap-2 p-4">
               <div className="min-w-0">
-                <p className="font-medium text-navy-800">{r.title}</p>
+                <p className="font-medium text-navy-900">{r.title}</p>
                 <p className="text-xs text-slate-500">{formatDate(r.createdAt)}</p>
               </div>
               <div className="flex gap-2">

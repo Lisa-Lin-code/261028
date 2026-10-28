@@ -16,15 +16,15 @@ export default function About() {
     <>
       <PageTitle title="교수 소개" />
       <div className="grid gap-8 md:grid-cols-3">
-        <dl className="space-y-4 rounded-lg border border-slate-200 p-5 text-sm md:col-span-1">
-          <div><dt className="text-slate-500">이름</dt><dd className="text-lg font-semibold text-navy-800">{profile.name}</dd></div>
-          <div><dt className="text-slate-500">소속</dt><dd>{profile.affiliation}</dd></div>
+        <dl className="space-y-4 rounded border border-slate-200 border-t-2 border-t-navy-700 bg-white p-6 text-sm shadow-sm md:col-span-1">
+          <div><dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">이름</dt><dd className="font-serif text-xl font-semibold text-navy-900">{profile.name}</dd></div>
+          <div><dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">소속</dt><dd>{profile.affiliation}</dd></div>
           <div>
-            <dt className="text-slate-500">연구 분야</dt>
+            <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">연구 분야</dt>
             <dd className="mt-1 flex flex-wrap gap-2">{profile.fields.map((f) => <span key={f} className="tag">{f}</span>)}</dd>
           </div>
           <div>
-            <dt className="text-slate-500">연락처</dt>
+            <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">연락처</dt>
             <dd><a className="text-navy-600 underline" href={`mailto:${profile.email}`}>{profile.email}</a></dd>
             <dd>{profile.office}</dd>
           </div>

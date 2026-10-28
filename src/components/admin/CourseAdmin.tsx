@@ -64,8 +64,8 @@ export default function CourseAdmin() {
 
   return (
     <div className="space-y-10">
-      <form onSubmit={handleSubmit} className="space-y-4 rounded-lg border border-slate-200 p-5">
-        <h2 className="text-lg font-bold text-navy-800">{editingId ? '수업 자료 수정' : '새 수업 자료 작성'}</h2>
+      <form onSubmit={handleSubmit} className="space-y-4 rounded border border-slate-200 bg-white p-5 shadow-sm">
+        <h2 className="text-lg font-bold text-navy-900">{editingId ? '수업 자료 수정' : '새 수업 자료 작성'}</h2>
         {formError && <ErrorMessage text={formError} />}
         <div className="grid gap-4 md:grid-cols-2">
           <div>
@@ -89,14 +89,14 @@ export default function CourseAdmin() {
       </form>
 
       <div>
-        <h2 className="mb-3 text-lg font-bold text-navy-800">등록된 수업 자료</h2>
+        <h2 className="mb-3 text-lg font-bold text-navy-900">등록된 수업 자료</h2>
         {loading && <Loading />}
         {error && <ErrorMessage text={error} />}
-        <ul className="divide-y divide-slate-200 rounded-lg border border-slate-200">
+        <ul className="divide-y divide-slate-200 rounded border border-slate-200 bg-white">
           {data?.map((c) => (
             <li key={c.id} className="flex flex-wrap items-center justify-between gap-2 p-4">
               <div className="min-w-0">
-                <p className="font-medium text-navy-800">{c.title} <span className="text-sm font-normal text-slate-500">· {c.semester}</span></p>
+                <p className="font-medium text-navy-900">{c.title} <span className="text-sm font-normal text-slate-500">· {c.semester}</span></p>
                 <p className="text-xs text-slate-500">{formatDate(c.createdAt)}</p>
               </div>
               <div className="flex gap-2">
