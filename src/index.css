@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white font-sans text-slate-800 antialiased;
+    line-height: 1.7;
+    word-break: keep-all; /* 한국어 단어 중간 줄바꿈 방지 */
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-navy-700 text-white hover:bg-navy-800;
+  }
+  .btn-outline {
+    @apply btn border border-navy-200 text-navy-700 hover:bg-navy-50;
+  }
+  .btn-danger {
+    @apply btn border border-red-200 text-red-700 hover:bg-red-50;
+  }
+  .input {
+    @apply w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:border-navy-500 focus:outline-none focus:ring-1 focus:ring-navy-500;
+  }
+  .label {
+    @apply mb-1 block text-sm font-medium text-slate-700;
+  }
+  .tag {
+    @apply inline-block rounded-full bg-navy-50 px-2.5 py-0.5 text-xs font-medium text-navy-700;
+  }
+}

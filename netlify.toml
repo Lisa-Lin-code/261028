@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# SPA: 새로고침/직접 접속 시 404가 나지 않도록 모든 경로를 index.html로 보낸다.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
